@@ -9,9 +9,73 @@
   type="text/css"
 />
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "header-bg": "#F9F7F3",
+          "btn-bg": "#B4F461",
+        },
+      },
+    },
+  };
+</script>
   <title>Blogs</title>
 </head>
 <body>
-  
+  <header class="sticky top-0 z-50">
+    <nav class="flex justify-center bg-header-bg">
+      <div class="navbar w-10/12 h-24">
+        <div class="navbar-start"><a href="./index.html">         <button class="btn bg-btn-bg text-xl font-semibold w-24">
+          Home
+        </button>
+      </div></a>
+ 
+        <div class="navbar-center">
+          <img src="./assets/logo.png" class="mr-2 w-9" alt="" />
+          <p class="text-black font-semibold text-xl">Donate Bangladesh</p>
+        </div>
+        <div class="navbar-end">
+          <img src="./assets/coin.png" class="mr-2 w-5 h-5" alt="" />
+          <p class="text-black font-medium text-xl"><span id="my-balance">5000</span> BDT</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="class=navbar w-10/12 mx-auto">
+      <div class="flex mt-12">
+        <h1 class="text-4xl mr-3 font-bold">Important FAQ</h1>
+        <img src="./assets/faq.png" class="w-11" alt="FAQ">
+      </div>
+      <div class="mt-6">
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 rounded-none rounded-t-xl border">
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p>The Document Object Model (DOM) is a way to represent a web page so that programming languages, like JavaScript, can interact with it. Think of the DOM as a big tree where each part of the web page (like text, images, buttons, etc.) is a "node" or "branch."</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 rounded-none border border-t-0">
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <p>To select an element from the DOM, you use JavaScript methods like getElementById, querySelector, or getElementsByClassName. These methods allow you to access specific elements on a web page and interact with them.</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 rounded-none border border-t-0">
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p>Event delegation is a technique where you attach a single event listener to a parent element to manage events for its child elements, instead of attaching individual event listeners to each child element.</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 rounded-none rounded-b-xl border border-t-0">
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+          <div class="collapse-content">
+            <p>You can manipulate an element's attributes using setAttribute, getAttribute, or directly with element.attributeName. For styles, you modify the style property, or by adding/removing CSS classes using classList methods (add, remove, toggle).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
